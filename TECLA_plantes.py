@@ -28,12 +28,6 @@ db_password = st.secrets["DB_PASSWORD"]
 
 openai.api_key = st.secrets["auto_pau"]
 
-db_host = DB_HOST
-db_port = DB_PORT
-db_name =DB_NAME
-db_user = DB_USER
-db_password = DB_PASSWORD
-
 st.markdown("""
 <style>
 body {
