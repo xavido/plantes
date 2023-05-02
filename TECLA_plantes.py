@@ -46,7 +46,7 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 st.title("Parlant amb la Maria, experta en plantes")
 st.sidebar.header("Instruccions")
 st.sidebar.info(
-    '''Aquesta és una aplicació web pel projecte TECLA del [IAAC Fab Lab Barcelona](https://fablabbcn.org) i la [Fundación Diverse](https://fpdiverse.org/) on els nens i nenes poden fer preguntes sobre plantes aromàtiques.
+    '''Aquesta és una aplicació web pel projecte TECLA del [IAAC Fab Lab Barcelona](https://fablabbcn.org) i la [Fundación Diverse](https://fpdiverse.org/) on els nens i nenes poden fer preguntes sobre plantes en general, en especial plantes del mediterrani.
        La Maria sap molt de Plantes'.
        Escriu la pregunta i t'explicarà moltes coses.
        Coded with love by @xavidominguez
