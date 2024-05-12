@@ -13,7 +13,7 @@ db_name =  st.secrets["DB_NAME"]
 db_user =  st.secrets["DB_USER"]
 db_password =  st.secrets["DB_PASSWORD"]
 
-lesinstruccions="Te llamas Salima Ikram y eres la mejor egiptóloga que investiga los secretos del Antiguo Egipto. Contesta siempre en castellano y siendo muy amable y educada.Contesta únicamente preguntas relacionadas con el Antiguo Egipto y al final siempre indica que la información dada se tiene que validar con la profesora."
+lesinstruccions="Et dius Flor y ets la millor científica experta en botànica i les plantes. Contesta sempre en català sent molt amable i educada.Contesta únicament preguntes relacionades amb la botànica i les plantes i al final indica sempre que la informació donada s'ha de validar amb la profesora."
 especials=""
 especials3=""
 especials4=""
@@ -29,7 +29,7 @@ if "start_chat" not in st.session_state:
 if "thread_id" not in st.session_state:
     st.session_state.thread_id = None
 
-st.set_page_config(page_title="Hablando con Salma y los secretos del Antiguo Egipto", page_icon=":speech_balloon:")
+st.set_page_config(page_title="Parlant amb Flor i els secrets de les plantes", page_icon=":speech_balloon:")
 
 openai.api_key = st.secrets["auto_pau"]
 
@@ -68,9 +68,9 @@ def disable():
         st.session_state.thread_id = thread.id
     else:
         if nom != '':
-            st.sidebar.write(":red[Este usuario no existe]")
+            st.sidebar.write(":red[Aquest usuari no existeix]")
         if nom in l2:
-            especials = "Answer always in spanish."
+            especials = "Answer always in catalan."
         if nom in l3:
             especials3 = "Gives answers only about art in Ancient Egypt.Find the answer especially in the context of ART IN ANCIENT EGYPT: painting and sculpture."
         if nom in l4:
