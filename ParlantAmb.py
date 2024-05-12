@@ -33,12 +33,12 @@ st.set_page_config(page_title="Parlant amb Flor i els secrets de les plantes", p
 
 openai.api_key = st.secrets["auto_pau"]
 
-l1 = ['xdominguez', 'mcarme','garte','gescritura','gmomias','gcreencias','gdioses','ILAN','ilan','CHLOE','chloe','gsociedad']
+l1 = ['xdominguez','mfernandez','earias','ybenlouadi','rbourada','scano','svargas','bchairi','achiriac','icisneros','vcoello','zdass','mdonoso','mgaouta','tessayeh','aflores','didugboe','bimedadze','kkaur','skhaddour','lkumar','nmoreno','tshahzad','ptricolici','hzheng']
 
-l2 = ['ILAN','ilan','garte','gescritura','gmomias','gcreencias','gdioses','gsociedad']
-l3 = ['garte']
-l4 = ['gescritura']
-l5 = ['gmomias']
+l2 = ['scano','vcoello','mdonoso']
+l3 = ['achiriac','ptricolici']
+l4 = ['kkaur']
+l5 = ['hzheng']
 l6 = ['gcreencias']
 l7 = ['gdioses']
 l8 = ['gsociedad']
@@ -70,19 +70,19 @@ def disable():
         if nom != '':
             st.sidebar.write(":red[Aquest usuari no existeix]")
         if nom in l2:
-            especials = "Answer always in catalan."
+            especials = "Gives answers only about plants and botanics.Short answer in 2 lines and always in catalan and repeat the answer in spanish."
         if nom in l3:
-            especials3 = "Gives answers only about art in Ancient Egypt.Find the answer especially in the context of ART IN ANCIENT EGYPT: painting and sculpture."
+            especials3 = "Gives answers only about plants and botanics.Short answer in 2 lines and always in catalan and repeat the answer in romanian."
         if nom in l4:
-            especials4 = "Gives answers only about writing in Ancient Egypt.Find the answer especially in the context of  EGYPTIAN WRITING: hieroglyphs and alphabet."
+            especials4 = "Gives answers only about plants and botanics.Short answer in 2 lines and always in catalan and repeat the answer in urdu."
         if nom in l5:
-            especials5 = "Gives answers only about Mummies in Ancient Egypt.Find the answer especially in the context of  Sarcophagi, mummies and mummification."
+            especials5 = "Gives answers only about plants and botanics.Short answer in 2 lines and always in catalan and repeat the answer in chinese."
         if nom in l6:
-            especials6 = "Gives answers only about believes in Ancient Egypt.Find the answer especially in the context of BELIEFS and objects buried in the pyramids."
+            especials6 = "Gives answers only about plants and botanics.Short answer in 2 lines and always in catalan and repeat the answer in spanish."
         if nom in l7:
-            especials7 = "Gives answers only about gods in Ancient Egypt.Find the answer especially in the context of MYTHOLOGY, the gods."
+            especials7 = "Gives answers only about plants and botanics.Short answer in 2 lines and always in catalan and repeat the answer in spanish."
         if nom in l8:
-            especials8 = "Gives short answers (4 lines) only about society in Ancient Egypt.Find the answer especially in the context of organization of society in Ancient Egypt"
+            especials8 = "Gives answers only about plants and botanics.Short answer in 2 lines and always in catalan and repeat the answer in spanish."
 
 
 def enable():
@@ -101,20 +101,20 @@ with st.sidebar.form("usuari_form"):
   nom = st.text_input("Escriu la teva identificació 👇",disabled=st.session_state.disabled, key=1)
   submit_button = st.form_submit_button(label="Iniciar Xat",disabled=st.session_state.disabled, on_click=disable)
   if nom in l2:
-      especials = "Answer always in català."
+      especials = "Gives answers only about plants and botanics.Short answer in 2 lines and always in catalan and repeat the answer in spanish."
   if nom in l3:
-      especials3 = "Gives answers only about art in Ancient Egypt.Find the answer especially in the context of ART IN ANCIENT EGYPT: painting and sculpture."
+      especials3 = "Gives answers only about plants and botanics.Short answer in 2 lines and always in catalan and repeat the answer in romanian."
   if nom in l4:
-      especials4 = "Gives answers only about writing in Ancient Egypt.Find the answer especially in the context of  EGYPTIAN WRITING: hieroglyphs and alphabet."
+      especials4 = "Gives answers only about plants and botanics.Short answer in 2 lines and always in catalan and repeat the answer in urdu."
   if nom in l5:
-      especials5 = "Gives answers only about Mummies in Ancient Egypt.Find the answer especially in the context of  Sarcophagi, mummies and mummification."
+      especials5 = "Gives answers only about plants and botanics.Short answer in 2 lines and always in catalan and repeat the answer in chinese."
   if nom in l6:
-      especials6 = "Gives answers only about believes in Ancient Egypt.Find the answer especially in the context of BELIEFS and objects buried in the pyramids."
+      especials6 = "Gives answers only about plants and botanics.Short answer in 2 lines and always in catalan and repeat the answer in spanish."
   if nom in l7:
-      especials7 = "Gives answers only about gods in Ancient Egypt.Find the answer especially in the context of MYTHOLOGY, the gods."
+      especials7 = "Gives answers only about plants and botanics.Short answer in 2 lines and always in catalan and repeat the answer in spanish."
   if nom in l8:
-      especials8 = "Gives short answers (4 lines) only about society in Ancient Egypt.Find the answer especially in the context of organization of society in Ancient Egypt"
-
+      especials8 = "Gives answers only about plants and botanics.Short answer in 2 lines and always in catalan and repeat the answer in spanish."
+      
   if submit_button and nom != '' and nom in l1:
         st.session_state.disabled = True
         st.session_state.start_chat = True
