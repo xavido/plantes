@@ -126,7 +126,7 @@ with st.sidebar.form("usuari_form"):
 st.title("Parlant amb ..Flor")
 st.write("Científica experta en botànica i els secrets de les plantes.")
 
-st.sidebar.button("Salir del Chat",on_click=enable)
+st.sidebar.button("Sortir del Xat",on_click=enable)
 
 if st.session_state.start_chat:
     if "openai_model" not in st.session_state:
@@ -138,7 +138,7 @@ if st.session_state.start_chat:
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
 
-    if prompt := st.chat_input("Escribe aquí tu pregunta"):
+    if prompt := st.chat_input("Escriu aquí la teva pregunta"):
         st.session_state.messages.append({"role": "user", "content": prompt})
         with st.chat_message("user"):
             st.markdown(prompt)
@@ -178,7 +178,7 @@ if st.session_state.start_chat:
                 if nom in l8:
                     response = client.images.generate(
                         model="dall-e-3",
-                        prompt="Haz una imagen realista sobre la estructura de la sociedad y las personas en el Antiguo Egipto:",
+                        prompt="Haz una imagen realista sobre las diferentes partes de una planta:",
                         size="1024x1024",
                         quality="standard",
                         n=1
@@ -220,7 +220,7 @@ if st.session_state.start_chat:
         # Ejecuta una consulta SQL
         sql = "INSERT INTO teclaPREGUNTES (idc,pregunta, resposta,infografia,tema) VALUES (%s,%s,%s,%s,%s)"
 
-        valores = (nom, prompt, message.content[0].text.value, creaName, 20000)
+        valores = (nom, prompt, message.content[0].text.value, creaName, 50000)
         cur.execute(sql, valores)
 
         # Obtiene los resultados de la consulta
@@ -248,4 +248,4 @@ if st.session_state.start_chat:
                 autoplay_audio(nomfitxer)
 
 else:
-    st.write("Añade tus datos y haz click en 'Iniciar Chat'.")
+    st.write("Afegeix aquí les teves dades i fes click a 'Iniciar Xat'.")
