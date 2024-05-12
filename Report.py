@@ -39,7 +39,7 @@ st.set_page_config(page_title="Informe sobre - Hablando con Flor...",page_icon="
 
 openai.api_key = st.secrets["auto_pau"]
 
-l1 = ['xdominguez', 'mfernandez']
+l1 = ['xdominguez', 'mfernandez','bea']
 listcaptions =[]
 listimages = []
 # Disable the submit button after it is clicked
