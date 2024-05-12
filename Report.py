@@ -35,7 +35,7 @@ if "start_chat" not in st.session_state:
 if "thread_id" not in st.session_state:
     st.session_state.thread_id = None
 
-st.set_page_config(page_title="Informe sobre - Hablando con Flor",page_icon="✅",layout="wide")
+st.set_page_config(page_title="Informe sobre - Hablando con Flor...",page_icon="✅",layout="wide")
 
 openai.api_key = st.secrets["auto_pau"]
 
