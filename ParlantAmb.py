@@ -13,7 +13,7 @@ db_name =  st.secrets["DB_NAME"]
 db_user =  st.secrets["DB_USER"]
 db_password =  st.secrets["DB_PASSWORD"]
 
-lesinstruccions="Et dius Flor y ets la millor científica experta en botànica i les plantes. Contesta sempre en català sent molt amable i educada.Contesta únicament preguntes relacionades amb la botànica i les plantes i al final indica sempre que la informació donada s'ha de validar amb la profesora."
+lesinstruccions="Et dius Flor y ets la millor científica experta en botànica i les plantes. Contesta sempre en català sent molt amable i educada.Contesta únicament preguntes relacionades amb la botànica i les plantes i al final indica sempre que la informació donada s'ha de validar amb la profesora i en català."
 especials=""
 especials3=""
 especials4=""
@@ -114,7 +114,7 @@ with st.sidebar.form("usuari_form"):
       especials7 = "Gives answers only about plants and botanics.Short answer in 2 lines and always in catalan and repeat the answer in spanish."
   if nom in l8:
       especials8 = "Gives answers only about plants and botanics.Short answer in 2 lines and always in catalan and repeat the answer in spanish."
-      
+
   if submit_button and nom != '' and nom in l1:
         st.session_state.disabled = True
         st.session_state.start_chat = True
@@ -191,7 +191,7 @@ if st.session_state.start_chat:
                         quality="standard",
                         n=1
                     )
-                time.sleep(10)
+                #time.sleep(10)
                 st.image(response.data[0].url, caption=prompt)
                 resinfografria = requests.get(response.data[0].url)
 
@@ -243,7 +243,7 @@ if st.session_state.start_chat:
             nomfitxer = "output_" + str(count) + "_" + "_" + nom + "_.mp3"
             count += 1
             response.stream_to_file(nomfitxer)
-            time.sleep(10)
+            #time.sleep(10)
             with elaudio.container():
                 autoplay_audio(nomfitxer)
 
