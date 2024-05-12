@@ -23,7 +23,7 @@ db_password =  st.secrets["DB_PASSWORD"]
 client = openai
 count = 0
 
-csv_file_path = 'egipto_informe_5.csv'
+csv_file_path = 'plantes_informe_.csv'
 
 if os.path.exists(csv_file_path):
   os.remove(csv_file_path)
@@ -35,11 +35,11 @@ if "start_chat" not in st.session_state:
 if "thread_id" not in st.session_state:
     st.session_state.thread_id = None
 
-st.set_page_config(page_title="Informe sobre - Hablando con Salma y los secretos del Antiguo Egipto",page_icon="✅",layout="wide")
+st.set_page_config(page_title="Informe sobre - Hablando con Flor",page_icon="✅",layout="wide")
 
 openai.api_key = st.secrets["auto_pau"]
 
-l1 = ['xdominguez', 'mcarme']
+l1 = ['xdominguez', 'mfernandez']
 listcaptions =[]
 listimages = []
 # Disable the submit button after it is clicked
@@ -93,9 +93,9 @@ with st.sidebar.form("usuari_form"):
         st.session_state.thread_id = thread.id
 
 
-st.title("Informe - Hablando con...Salma")
+st.title("Informe - Parlant Amb...Flor")
 
-st.sidebar.button("Salir del Informe",on_click=enable)
+st.sidebar.button("Salir del informe",on_click=enable)
 
 if st.session_state.start_chat:
     if "openai_model" not in st.session_state:
@@ -111,7 +111,7 @@ if st.session_state.start_chat:
         cur = conn.cursor()
 
         # Ejecuta una consulta SQL
-        sql = "SELECT * FROM teclaPREGUNTES WHERE tema = '20000'"
+        sql = "SELECT * FROM teclaPREGUNTES WHERE tema = '50000'"
         cur.execute(sql)
 
         # Obtiene los resultados de la consulta
