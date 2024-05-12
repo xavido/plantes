@@ -98,10 +98,10 @@ if "disabled" not in st.session_state:
     st.session_state.disabled = False
 
 with st.sidebar.form("usuari_form"):
-  nom = st.text_input("Escribe tu identificación 👇",disabled=st.session_state.disabled, key=1)
-  submit_button = st.form_submit_button(label="Iniciar Chat",disabled=st.session_state.disabled, on_click=disable)
+  nom = st.text_input("Escriu la teva identificació 👇",disabled=st.session_state.disabled, key=1)
+  submit_button = st.form_submit_button(label="Iniciar Xat",disabled=st.session_state.disabled, on_click=disable)
   if nom in l2:
-      especials = "Answer always in spanish."
+      especials = "Answer always in català."
   if nom in l3:
       especials3 = "Gives answers only about art in Ancient Egypt.Find the answer especially in the context of ART IN ANCIENT EGYPT: painting and sculpture."
   if nom in l4:
@@ -123,8 +123,8 @@ with st.sidebar.form("usuari_form"):
         st.session_state.thread_id = thread.id
 
 
-st.title("Hablando con...Salma")
-st.write("Soy egiptóloga e investigo los secretos del Antiguo Egipto.")
+st.title("Parlant amb ..Flor")
+st.write("Científica experta en botànica i els secrets de les plantes.")
 
 st.sidebar.button("Salir del Chat",on_click=enable)
 
